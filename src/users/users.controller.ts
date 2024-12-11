@@ -10,7 +10,7 @@ import {
 } from '@nestjs/common';
 import { UsersService } from './users.service';
 import { User } from './user.entity';
-import { FirebaseAuthGuard } from 'src/auth/firebase-auth.guard';
+import { FirebaseAuthGuard } from 'src/core/guards/firebase-auth.guard';
 
 @Controller('users')
 export class UsersController {
