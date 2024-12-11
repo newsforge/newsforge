@@ -1,7 +1,7 @@
 import { IsString, IsNumber, IsBoolean, validateSync } from 'class-validator';
 import { plainToInstance } from 'class-transformer';
 
-class EnvironmentVariables {
+export class EnvironmentVariables {
   @IsString()
   DATABASE_HOST: string;
 
@@ -19,6 +19,15 @@ class EnvironmentVariables {
 
   @IsBoolean()
   DATABASE_SYNC: boolean;
+
+  @IsString()
+  FIREBASE_PROJECT_ID: string;
+
+  @IsString()
+  FIREBASE_PRIVATE_KEY: string;
+
+  @IsString()
+  FIREBASE_CLIENT_EMAIL: string;
 }
 
 export function validate(config: Record<string, unknown>) {
