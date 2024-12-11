@@ -8,9 +8,9 @@ import {
   Delete,
   UseGuards,
 } from '@nestjs/common';
-import { UsersService } from './users.service';
 import { User } from './user.entity';
-import { FirebaseAuthGuard } from 'src/core/guards/firebase-auth.guard';
+import { UsersService } from './users.service';
+import { FirebaseAuthGuard } from '../core/guards/firebase-auth.guard';
 
 @Controller('users')
 export class UsersController {
