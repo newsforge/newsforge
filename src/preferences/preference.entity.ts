@@ -1,12 +1,8 @@
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
-export interface FilterCriteria {
-  criteria: string;
-}
-
 export interface NewsSource {
   source: string;
-  criteria: FilterCriteria[];
+  criteria: string[];
 }
 
 @Entity()

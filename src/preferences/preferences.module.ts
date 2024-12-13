@@ -10,5 +10,6 @@ import { Preference } from './preference.entity';
   imports: [TypeOrmModule.forFeature([Preference])],
   providers: [PreferenceService, FirebaseService],
   controllers: [PreferenceController],
+  exports: [PreferenceService, TypeOrmModule.forFeature([Preference])],
 })
 export class PreferencesModule {}

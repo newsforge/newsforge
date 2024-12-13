@@ -5,7 +5,7 @@ import { Module } from '@nestjs/common';
 
 import { PreferencesModule } from './preferences/preferences.module';
 import { FirebaseService } from './core/services/firebase.service';
-import { TasksService } from './core/services/tasks.service';
+import { OpenAIService } from './core/services/openai.service';
 import databaseConfig from './core/config/database.config';
 import firebaseConfig from './core/config/firebase.config';
 import { validate } from './core/config/env.validation';
@@ -14,7 +14,7 @@ import { FeedModule } from './feed/feed.module';
 
 @Module({
   controllers: [],
-  providers: [FirebaseService, TasksService],
+  providers: [FirebaseService, OpenAIService],
   imports: [
     UsersModule,
     FeedModule,
